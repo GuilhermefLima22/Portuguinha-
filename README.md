@@ -81,3 +81,22 @@ Ao enviar uma foto no WhatsApp da gerência:
 2. **Anti-Mensagens Antigas:** Mensagens com mais de 5 minutos (histórico sincronizado do WhatsApp) são descartadas imediatamente para não gerar registros indevidos.
 3. **Anti-Duplicidade de Placa:** Se a mesma placa for enviada duas vezes no mesmo dia, o bot bloqueia a repetição e avisa na hora no WhatsApp, mantendo a planilha sempre limpa.
 4. **Visão com Retry Automático:** Usa o modelo ultrarrápido `gemini-3.5-flash-lite` com até 4 retentativas automáticas contra oscilações de conexão.
+5. **Roteamento Exclusivo da Oficina Jcar (Jeferson):** Carros identificados com "Jeferson" ou "Jcar" são gravados automaticamente na aba dedicada `Jcar` da planilha.
+6. **Anti-Spam de Inicialização (Trava Diária):** O aviso de "sistema iniciado" só é enviado no primeiro boot do dia. Qualquer reinicialização ou manutenção subsequente no mesmo dia é silenciada automaticamente para não poluir o seu WhatsApp!
+
+---
+
+## 🏢 Aba Exclusiva da Oficina Jcar (Jeferson)
+
+- **Como funciona:** Sempre que a legenda da foto contiver o nome **`Jeferson`** (ou `Jefferson`, `Jéferson`, `Jcar`, `J car`):
+  - O Portuguinha direciona o lançamento diretamente para a aba **`Jcar`** da planilha `Planilha_LavaRápido`!
+  - O cliente fica registrado como **`Jeferson (Jcar)`**.
+  - O WhatsApp confirma: `🚗🇵🇹 ENTRADA NO PÁTIO REGISTRADA — OFICINA JCAR! ✅ Já lancei na planilha exclusiva da JCAR!`
+  - Os carros normais continuam indo para a aba principal `Página1`.
+
+- **Tabela Fixa da Jcar (Preços Padronizados):**
+  - **Hatch ou Sedan:** **R$ 50**
+  - **SUV ou Caminhonete / Picape:** **R$ 65**
+  - *(Basta mandar a foto com a legenda "Jeferson" ou "Jcar" sem precisar digitar valor nenhum — ele já aplica os R$ 50 ou R$ 65 automaticamente pelo porte do veículo!)*
+  - ⚠️ **Prioridade Máxima à Legenda:** Se for um caso especial e você/Portuga digitarem um valor explícito na legenda (ex: `Jeferson 80`, `Jcar motor 120`), o valor digitado na legenda prevalece sempre!
+

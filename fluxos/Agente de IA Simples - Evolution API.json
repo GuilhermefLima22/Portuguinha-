@@ -10,8 +10,8 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2,
       "position": [
-        -960,
-        128
+        -920,
+        200
       ],
       "id": "541ae06d-0dc6-40a3-a8f3-a0d93144a121",
       "name": "Webhook",
@@ -145,8 +145,8 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.2,
       "position": [
-        -528,
-        128
+        -240,
+        200
       ],
       "id": "49f195bf-4177-4eda-854f-861906f5e19b",
       "name": "Switch"
@@ -165,8 +165,8 @@
       "type": "n8n-nodes-evolution-api.evolutionApi",
       "typeVersion": 1,
       "position": [
-        720,
-        112
+        440,
+        200
       ],
       "id": "c349e68f-630f-412d-a84b-8dd4b49ff5ea",
       "name": "Enviar texto",
@@ -176,22 +176,6 @@
           "name": "Evolution account"
         }
       }
-    },
-    {
-      "parameters": {
-        "content": "### Ferramentas",
-        "height": 280,
-        "width": 420,
-        "color": 5
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "position": [
-        400,
-        432
-      ],
-      "typeVersion": 1,
-      "id": "3cec41ad-74ec-4046-b9cc-ece2a1a23768",
-      "name": "Sticky Note"
     },
     {
       "parameters": {
@@ -270,8 +254,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        -736,
-        128
+        -700,
+        200
       ],
       "id": "a63ce38e-ed8b-439a-84e5-c6c5c073128d",
       "name": "Dados"
@@ -294,8 +278,8 @@
       "type": "n8n-nodes-evolution-api.evolutionApi",
       "typeVersion": 1,
       "position": [
-        -320,
-        272
+        100,
+        50
       ],
       "id": "6ce6903c-14e9-4926-bcc1-a53b5d1ccb76",
       "name": "Tipo de mensagem não suportado",
@@ -315,8 +299,8 @@
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "typeVersion": 1.3,
       "position": [
-        208,
-        480
+        100,
+        360
       ],
       "id": "a5d76024-8608-49ad-a672-d4de4844b2e6",
       "name": "Memória de chats"
@@ -332,58 +316,11 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2,
       "position": [
-        80,
-        112
+        100,
+        200
       ],
       "id": "6a5f6202-b663-4a4d-8e4d-639e16f787d5",
       "name": "Agente de IA"
-    },
-    {
-      "parameters": {
-        "content": "### Modelo de IA\n\n\n\n\n\n\n\n\n\n\n\nEscolha entre OpenAI, Gemini, Groq, Deepseek, Claude, etc.",
-        "height": 280,
-        "width": 170
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "position": [
-        -96,
-        432
-      ],
-      "typeVersion": 1,
-      "id": "2452732e-0c91-4d14-a7ed-05a027d4f12d",
-      "name": "Sticky Note1"
-    },
-    {
-      "parameters": {
-        "content": "### Memória de chats\n\n\n\n\n\n\n\n\n\n\n\n\nPara produção, troque para um Postgres ou Redis.",
-        "height": 280,
-        "width": 180,
-        "color": 3
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "position": [
-        160,
-        432
-      ],
-      "typeVersion": 1,
-      "id": "942a11ca-e207-43e0-95a6-58e845558ac5",
-      "name": "Sticky Note2"
-    },
-    {
-      "parameters": {
-        "content": "## Agente de IA - Prompt",
-        "height": 300,
-        "width": 440,
-        "color": 4
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "position": [
-        0,
-        0
-      ],
-      "typeVersion": 1,
-      "id": "50266bbe-0373-42f7-bf09-525da194decb",
-      "name": "Sticky Note3"
     },
     {
       "parameters": {
@@ -393,8 +330,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1.1,
       "position": [
-        -48,
-        512
+        -60,
+        360
       ],
       "id": "fbac6887-454b-44c7-86e6-ca94f0b5fc03",
       "name": "Google Gemini Chat Model",
@@ -550,8 +487,8 @@
       "type": "n8n-nodes-base.googleSheetsTool",
       "typeVersion": 4.7,
       "position": [
-        464,
-        512
+        260,
+        360
       ],
       "id": "920ffd4e-9fc7-4540-9462-9b6acc47705b",
       "name": "PedidoLava_Rapido",
@@ -594,27 +531,11 @@
       "type": "n8n-nodes-base.httpRequestTool",
       "typeVersion": 4.5,
       "position": [
-        656,
-        512
+        420,
+        360
       ],
       "id": "f2228263-ee40-4343-9992-2bf076f329ea",
       "name": "Notificar_Portuga"
-    },
-    {
-      "parameters": {
-        "content": "## Modo Pátio - Registro por Foto (VIP/Admin)\n\n**Autorizados:** Portuga e Você (`11989568771` e `11944724367`)\n1. Lê a placa e o modelo do carro com o Gemini Visão\n2. Se o nome não foi informado na foto, busca no histórico da planilha\n3. Grava automaticamente na planilha e confirma no WhatsApp!",
-        "height": 380,
-        "width": 1900,
-        "color": 6
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "position": [
-        -280,
-        -420
-      ],
-      "typeVersion": 1,
-      "id": "patio-sticky-note-id",
-      "name": "Sticky Note - Modo Pátio"
     },
     {
       "parameters": {
@@ -644,7 +565,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        -280,
+        60,
         -220
       ],
       "id": "patio-get-media-id",
@@ -658,7 +579,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -40,
+        280,
         -220
       ],
       "id": "patio-convert-binary-id",
@@ -675,14 +596,14 @@
         },
         "inputType": "binary",
         "binaryPropertyName": "data",
-        "text": "=Você é o assistente técnico do Lava Rápido do Portuga (exclusivo para uso interno do pátio pelos gerentes).\nAnalise com atenção a imagem do veículo e a legenda enviada: \"{{ $('Dados').first().json.caption }}\".\n\nSUAS TAREFAS:\n1. Extraia a PLACA do veículo que aparece na foto (padrão Mercosul ou cinza antigo, ex: ABC1D23 ou ABC1234). Remova traços ou espaços da placa. Se a placa estiver ilegível ou não visível, retorne null.\n2. Identifique a MARCA e MODELO do veículo pela foto (ex: Mercedes-Benz Sprinter, Mercedes-Benz C180, Fiat Argo, Honda Civic, Toyota Corolla, Hyundai HB20, Jeep Compass, Honda CG 160, etc.).\n3. Identifique a CATEGORIA/TIPO do veículo: \"Hatch\", \"Sedan\", \"SUV\", \"Picape\" (caminhonetes), \"Van\" (vans/utilitários como Sprinter, Ducato, Master, Transit, Fiorino, Kombi, HR, Bongo) ou \"Moto\".\n4. Analise a legenda enviada (\"{{ $('Dados').first().json.caption }}\"):\n   - REGRA DE OURO (PRIORIDADE MÁXIMA): Se a legenda mencionar EXPLICITAMENTE o serviço (ex: \"Ducha\", \"Simples\", \"Completa\", \"Completo\", \"VIP\", \"Motor\", \"Por baixo\"), você DEVE usar exatamente o serviço escrito na legenda! NUNCA mude o serviço que foi escrito na legenda!\n   - SOMENTE se a legenda NÃO disser o nome do serviço (ex: se o Portuga digitou apenas o número \"60\", \"30\", \"90\"), deduza o serviço pela TABELA MENTAL abaixo:\n     * Para HATCH ou SEDAN: 30 = \"Simples / Ducha\" | 60 = \"Completa\" | 90 = \"Lavagem VIP\" | 120+ = \"Lavagem Personalizada (Por baixo e Motor)\"\n     * Para SUV ou PICAPE: 40 = \"Simples / Ducha\" | 90 = \"Completa\" | 100 a 120 = \"Lavagem VIP\" | Acima de 120 = \"Lavagem Personalizada (Por baixo e Motor)\"\n     * Para MOTO: Valor fixo \"30\", serviço \"Completa (Moto)\".\n\nExtraia os campos:\n- \"nome\": Nome ou apelido do cliente caso informado na legenda (ex: em \"Bahia 60 débito\", o nome é \"Bahia\"). Atenção: palavras como \"simples\", \"ducha\", \"completa\", \"completo\", \"vip\", \"motor\", \"por baixo\", \"pix\", \"dinheiro\", \"debito\", \"credito\", \"cartao\" NÃO são nomes de clientes! Se NÃO informado nenhum nome, retorne null.\n- \"telefone\": Telefone do cliente caso informado na legenda (apenas números, mínimo 8 dígitos). Se NÃO informado, retorne null.\n- \"valor\": Valor numérico extraído da legenda (ex: \"30\", \"40\", \"60\", \"90\", \"110\", \"120\") ou \"30\" se for Moto sem valor informado.\n- \"tipoLavagem\": O serviço escrito na legenda (prioridade máxima) ou deduzido pela Tabela Mental se omitido na legenda.\n- \"formaPagamento\": Pix, Dinheiro, Cartão (Débito) ou Cartão (Crédito). Se não informado, retorne \"A combinar\".\n\nResponda ESTRITAMENTE em formato JSON puro, sem formatação markdown, sem crases:\n{\n  \"placa\": \"ABC1D23\",\n  \"carro\": \"Mercedes-Benz Sprinter\",\n  \"tipoCarro\": \"Van\",\n  \"nome\": null,\n  \"telefone\": null,\n  \"tipoLavagem\": \"Ducha\",\n  \"valor\": \"60\",\n  \"formaPagamento\": \"A combinar\"\n}",
+        "text": "=Você é o assistente técnico do Lava Rápido do Portuga (exclusivo para uso interno do pátio pelos gerentes).\nAnalise com atenção a imagem do veículo e a legenda enviada: \"{{ $('Dados').first().json.caption }}\".\n\nSUAS TAREFAS:\n1. Extraia a PLACA do veículo que aparece na foto (padrão Mercosul ou cinza antigo, ex: ABC1D23 ou ABC1234). Remova traços ou espaços da placa. Se a placa estiver ilegível ou não visível, retorne null.\n2. Identifique a MARCA e MODELO do veículo pela foto (ex: Mercedes-Benz Sprinter, Mercedes-Benz C180, Fiat Argo, Honda Civic, Toyota Corolla, Hyundai HB20, Jeep Compass, Honda CG 160, etc.).\n3. Identifique a CATEGORIA/TIPO do veículo: \"Hatch\", \"Sedan\", \"SUV\", \"Picape\" (caminhonetes), \"Van\" (vans/utilitários como Sprinter, Ducato, Master, Transit, Fiorino, Kombi, HR, Bongo) ou \"Moto\".\n4. Analise a legenda enviada (\"{{ $('Dados').first().json.caption }}\"):\n   - REGRA DE OURO (PRIORIDADE MÁXIMA): Se a legenda mencionar EXPLICITAMENTE o serviço (ex: \"Ducha\", \"Simples\", \"Completa\", \"Completo\", \"VIP\", \"Motor\", \"Por baixo\"), você DEVE usar exatamente o serviço escrito na legenda! NUNCA mude o serviço que foi escrito na legenda!\n   - SOMENTE se a legenda NÃO disser o nome do serviço (ex: se o Portuga digitou apenas o número \"60\", \"30\", \"90\"), deduza o serviço pela TABELA MENTAL abaixo:\n     * Para HATCH ou SEDAN: 30 = \"Simples / Ducha\" | 60 = \"Completa\" | 90 = \"Lavagem VIP\" | 120+ = \"Lavagem Personalizada (Por baixo e Motor)\"\n     * Para SUV ou PICAPE: 40 = \"Simples / Ducha\" | 90 = \"Completa\" | 100 a 120 = \"Lavagem VIP\" | Acima de 120 = \"Lavagem Personalizada (Por baixo e Motor)\"\n     * Para MOTO: Valor fixo \"30\", serviço \"Completa (Moto)\".\n\nExtraia os campos:\n- \"nome\": Nome ou apelido do cliente caso informado na legenda (ex: em \"Bahia 60 débito\", o nome é \"Bahia\"). Atenção: palavras como \"simples\", \"ducha\", \"completa\", \"completo\", \"vip\", \"motor\", \"por baixo\", \"pix\", \"dinheiro\", \"debito\", \"credito\", \"cartao\" NÃO são nomes de clientes! Se NÃO informado nenhum nome, retorne null.\n- \"telefone\": Telefone do cliente caso informado na legenda (apenas números, mínimo 8 dígitos). Se NÃO informado, retorne null.\n- \"valor\": Valor numérico extraído da legenda (ex: \"30\", \"40\", \"60\", \"90\", \"110\", \"120\") ou \"30\" se for Moto sem valor informado.\n- \"tipoLavagem\": O serviço escrito na legenda (prioridade máxima) ou deduzido pela Tabela Mental se omitido na legenda.\n- \"formaPagamento\": Pix, Dinheiro, Cartão (Débito) ou Cartão (Crédito). Se não informado, retorne \"A combinar\".\n\nResponda ESTRITAMENTE em formato JSON puro, sem formatação markdown, sem crases:\n{\n  \"placa\": \"ABC1D23\",\n  \"carro\": \"Mercedes-Benz Sprinter\",\n  \"tipoCarro\": \"Van\",\n  \"nome\": null,\n  \"telefone\": null,\n  \"tipoLavagem\": \"Ducha\",\n  \"valor\": \"60\",\n  \"formaPagamento\": \"A combinar\"\n}\n\n5. REGRAS DE PREÇO DA OFICINA JCAR (JEFERSON):\n- Se o veículo for da oficina Jcar (legenda contiver \"Jeferson\", \"Jefferson\", \"Jcar\"):\n  * A legenda tem PRIORIDADE MÁXIMA caso informe um valor explícito (caso especial, ex: 80, 120).\n  * Se a legenda NÃO informar valor, aplique a TABELA FIXA DA JCAR:\n    - Hatch ou Sedan = R$ 50\n    - SUV ou Caminhonete/Picape = R$ 65",
         "simplify": true,
         "options": {}
       },
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
       "typeVersion": 1,
       "position": [
-        200,
+        500,
         -220
       ],
       "id": "patio-gemini-vision-id",
@@ -699,12 +620,12 @@
     },
     {
       "parameters": {
-        "jsCode": "const parts = $json.content?.parts || $json.candidates?.[0]?.content?.parts || [];\nconst textPart = parts.find(p => p.text && !p.thought) || parts[parts.length - 1] || {};\nlet geminiRaw = textPart.text \n  || (typeof $json.text === 'string' ? $json.text : '') \n  || (typeof $json.output === 'string' ? $json.output : '') \n  || (typeof $json.content === 'string' ? $json.content : '') \n  || '';\n\ngeminiRaw = String(geminiRaw).replace(/```json/gi, '').replace(/```/g, '').trim();\n\nlet parsed;\ntry {\n  const jsonMatch = geminiRaw.match(/\\{[\\s\\S]*\\}/);\n  parsed = JSON.parse(jsonMatch ? jsonMatch[0] : geminiRaw);\n} catch (e) {\n  parsed = {\n    placa: null,\n    carro: 'Veículo',\n    tipoCarro: 'Sedan',\n    nome: null,\n    telefone: null,\n    tipoLavagem: null,\n    valor: null,\n    formaPagamento: 'A combinar'\n  };\n}\n\nconst dados = $('Dados').first().json;\nconst caption = String(dados.caption || '').trim();\nconst captionLower = caption.toLowerCase();\n\nconst placa = parsed.placa ? String(parsed.placa).toUpperCase().replace(/[^A-Z0-9]/g, '') : '';\nlet tipoCarro = parsed.tipoCarro || 'Sedan';\nconst fullCarText = (tipoCarro + ' ' + (parsed.carro || '')).toLowerCase();\n\nif (/moto|scooter|bis|cg|titan|fan|bros|xre|cb|fazer|lander|yamaha|harley|pcx|nmax/i.test(fullCarText)) {\n  tipoCarro = 'Moto';\n} else if (/van|sprinter|ducato|master|jumper|boxer|transit|fiorino|kangoo|partner|kombi|topic|daily|hr|bongo|iveco|furgao|furgão|utilitario|utilitário/i.test(fullCarText)) {\n  tipoCarro = 'Van';\n} else if (/picape|pickup|caminhonete|camionete|hilux|ranger|amarok|s10|toro|strada|saveiro|ram|montana|oroch|l200|frontier/i.test(fullCarText)) {\n  tipoCarro = 'Picape';\n} else if (/suv|kicks|compass|renegade|tracker|creta|hr-v|hrv|t-cross|tcross|nivus|duster|ecosport|spin|sw4|tiggo|pajero|fastback|pulse/i.test(fullCarText)) {\n  tipoCarro = 'SUV';\n} else if (/hatch|gol|onix|hb20|palio|uno|argo|mobi|kwid|sandero|fox|polo|up|celta|corsa|fiesta|ka|fit|march|208|c3|a3|golf|yaris/i.test(fullCarText)) {\n  tipoCarro = 'Hatch';\n} else if (!['Hatch', 'Sedan', 'SUV', 'Picape', 'Van', 'Moto'].includes(tipoCarro)) {\n  tipoCarro = 'Sedan';\n}\n\n// Extrair valor numérico da legenda ou do Gemini\nlet valorNum = null;\nconst numMatches = caption.match(/\\b(\\d{2,3})\\b/g);\nif (numMatches && numMatches.length > 0) {\n  valorNum = parseInt(numMatches[numMatches.length - 1], 10);\n} else if (parsed.valor && /^\\d+$/.test(String(parsed.valor).trim())) {\n  valorNum = parseInt(String(parsed.valor).trim(), 10);\n}\n\nconst isSuvOrPicape = (tipoCarro === 'SUV' || tipoCarro === 'Picape');\nconst isHatchOrSedan = (tipoCarro === 'Hatch' || tipoCarro === 'Sedan');\nconst isMoto = (tipoCarro === 'Moto');\n\n// 1. PRIORIDADE MÁXIMA ABSOLUTA: Verificar se a legenda escreveu explicitamente o nome do serviço!\nlet servicoExplicito = null;\nif (/motor|baixo|chassi|personalizad/i.test(captionLower)) {\n  servicoExplicito = 'Lavagem Personalizada (Por baixo e Motor)';\n} else if (/\\bvip\\b|cera|polimento/i.test(captionLower)) {\n  servicoExplicito = 'Lavagem VIP';\n} else if (/\\bducha\\b|\\bduxinha\\b|\\bduxa\\b/i.test(captionLower)) {\n  servicoExplicito = 'Ducha';\n} else if (/\\bsimples\\b|\\bsinples\\b|\\bsimpres\\b/i.test(captionLower)) {\n  servicoExplicito = 'Simples';\n} else if (/complet[ao]|conplet[ao]|complwt[ao]|geral/i.test(captionLower)) {\n  servicoExplicito = 'Completa';\n}\n\nlet tipoLavagem = servicoExplicito || '';\nlet valorFinal = valorNum !== null ? String(valorNum) : (parsed.valor && parsed.valor !== 'null' ? String(parsed.valor) : 'A combinar');\n\n// 2. SOMENTE se o serviço NÃO foi escrito explicitamente na legenda, aplica a Tabela Mental pelo valor!\nif (!servicoExplicito) {\n  if (isMoto) {\n    if (valorNum === null) valorFinal = '30';\n    tipoLavagem = 'Completa (Moto)';\n  } else if (valorNum !== null) {\n    if (isHatchOrSedan) {\n      if (valorNum === 30) tipoLavagem = 'Simples / Ducha';\n      else if (valorNum === 60) tipoLavagem = 'Completa';\n      else if (valorNum === 90) tipoLavagem = 'Lavagem VIP';\n      else if (valorNum >= 120) tipoLavagem = 'Lavagem Personalizada (Por baixo e Motor)';\n    } else if (isSuvOrPicape) {\n      if (valorNum === 40) tipoLavagem = 'Simples / Ducha';\n      else if (valorNum === 90) tipoLavagem = 'Completa';\n      else if (valorNum >= 100 && valorNum <= 120) tipoLavagem = 'Lavagem VIP';\n      else if (valorNum > 120) tipoLavagem = 'Lavagem Personalizada (Por baixo e Motor)';\n    }\n  }\n} else if (valorNum === null) {\n  // Se escreveu o nome do serviço mas não escreveu o valor, preenche o valor padrão pela Tabela Mental!\n  if (isMoto) {\n    valorFinal = '30';\n  } else if (servicoExplicito === 'Lavagem Personalizada (Por baixo e Motor)') {\n    valorFinal = '120';\n  } else if (servicoExplicito === 'Lavagem VIP') {\n    valorFinal = isSuvOrPicape ? '100' : '90';\n  } else if (servicoExplicito === 'Ducha' || servicoExplicito === 'Simples') {\n    valorFinal = isSuvOrPicape ? '40' : '30';\n  } else if (servicoExplicito === 'Completa') {\n    valorFinal = isSuvOrPicape ? '90' : '60';\n  }\n}\n\nif (!tipoLavagem) {\n  tipoLavagem = parsed.tipoLavagem || 'Completa';\n}\n\nconst invalidNames = ['simples', 'ducha', 'completa', 'completo', 'vip', 'motor', 'baixo', 'pix', 'dinheiro', 'debito', 'débito', 'credito', 'crédito', 'cartao', 'cartão', 'null'];\nconst rawNome = parsed.nome ? String(parsed.nome).trim() : '';\nconst nomeInformado = rawNome !== '' && !invalidNames.includes(rawNome.toLowerCase()) && !/^\\d+$/.test(rawNome);\nconst telefoneInformado = parsed.telefone && parsed.telefone !== 'null' && String(parsed.telefone).replace(/\\D/g, '').length >= 8;\n\nreturn [{\n  json: {\n    placa: placa,\n    carro: parsed.carro || 'Veículo',\n    tipoCarro: tipoCarro,\n    nome: nomeInformado ? rawNome : null,\n    telefone: telefoneInformado ? String(parsed.telefone).trim() : null,\n    tipoLavagem: tipoLavagem,\n    valor: valorFinal,\n    formaPagamento: parsed.formaPagamento || 'A combinar',\n    precisaBuscarHistorico: (!nomeInformado || !telefoneInformado) && !!placa,\n    senderNumber: dados.senderNumber,\n    remoteJid: dados.remoteJid,\n    instance: dados.instance\n  }\n}];"
+        "jsCode": "const parts = $json.content?.parts || $json.candidates?.[0]?.content?.parts || [];\nconst textPart = parts.find(p => p.text && !p.thought) || parts[parts.length - 1] || {};\nlet geminiRaw = textPart.text \n  || (typeof $json.text === 'string' ? $json.text : '') \n  || (typeof $json.output === 'string' ? $json.output : '') \n  || (typeof $json.content === 'string' ? $json.content : '') \n  || '';\n\ngeminiRaw = String(geminiRaw).replace(/```json/gi, '').replace(/```/g, '').trim();\n\nlet parsed;\ntry {\n  const jsonMatch = geminiRaw.match(/\\{[\\s\\S]*\\}/);\n  parsed = JSON.parse(jsonMatch ? jsonMatch[0] : geminiRaw);\n} catch (e) {\n  parsed = {\n    placa: null,\n    carro: 'Veículo',\n    tipoCarro: 'Sedan',\n    nome: null,\n    telefone: null,\n    tipoLavagem: null,\n    valor: null,\n    formaPagamento: 'A combinar'\n  };\n}\n\nconst dados = $('Dados').first().json;\nconst caption = String(dados.caption || '').trim();\nconst captionLower = caption.toLowerCase();\n\nconst placa = parsed.placa ? String(parsed.placa).toUpperCase().replace(/[^A-Z0-9]/g, '') : '';\nlet tipoCarro = parsed.tipoCarro || 'Sedan';\nconst fullCarText = (tipoCarro + ' ' + (parsed.carro || '')).toLowerCase();\n\nif (/moto|scooter|bis|cg|titan|fan|bros|xre|cb|fazer|lander|yamaha|harley|pcx|nmax/i.test(fullCarText)) {\n  tipoCarro = 'Moto';\n} else if (/van|sprinter|ducato|master|jumper|boxer|transit|fiorino|kangoo|partner|kombi|topic|daily|hr|bongo|iveco|furgao|furgão|utilitario|utilitário/i.test(fullCarText)) {\n  tipoCarro = 'Van';\n} else if (/picape|pickup|caminhonete|camionete|hilux|ranger|amarok|s10|toro|strada|saveiro|ram|montana|oroch|l200|frontier/i.test(fullCarText)) {\n  tipoCarro = 'Picape';\n} else if (/suv|kicks|compass|renegade|tracker|creta|hr-v|hrv|t-cross|tcross|nivus|duster|ecosport|spin|sw4|tiggo|pajero|fastback|pulse/i.test(fullCarText)) {\n  tipoCarro = 'SUV';\n} else if (/hatch|gol|onix|hb20|palio|uno|argo|mobi|kwid|sandero|fox|polo|up|celta|corsa|fiesta|ka|fit|march|208|c3|a3|golf|yaris/i.test(fullCarText)) {\n  tipoCarro = 'Hatch';\n} else if (!['Hatch', 'Sedan', 'SUV', 'Picape', 'Van', 'Moto'].includes(tipoCarro)) {\n  tipoCarro = 'Sedan';\n}\n\n// Verificar nome e se é da oficina Jcar (Jeferson) ANTES do cálculo de valores!\nconst invalidNames = ['simples', 'ducha', 'completa', 'completo', 'vip', 'motor', 'baixo', 'pix', 'dinheiro', 'debito', 'débito', 'credito', 'crédito', 'cartao', 'cartão', 'null'];\nconst rawNome = parsed.nome ? String(parsed.nome).trim() : '';\nconst nomeInformado = rawNome !== '' && !invalidNames.includes(rawNome.toLowerCase()) && !/^\\d+$/.test(rawNome);\nconst telefoneInformado = parsed.telefone && parsed.telefone !== 'null' && String(parsed.telefone).replace(/\\D/g, '').length >= 8;\nconst isJcar = /jeferson|jefferson|jéferson|jcar|\\bj car\\b/i.test(captionLower) || /jeferson|jefferson|jéferson|jcar/i.test(rawNome);\nlet nomeFinal = nomeInformado ? rawNome : null;\nif (isJcar) {\n  nomeFinal = 'Jeferson (Jcar)';\n}\n\n// Extrair valor numérico da legenda ou do Gemini\nlet valorNum = null;\nconst numMatches = caption.match(/\\b(\\d{2,3})\\b/g);\nif (numMatches && numMatches.length > 0) {\n  valorNum = parseInt(numMatches[numMatches.length - 1], 10);\n} else if (parsed.valor && /^\\d+$/.test(String(parsed.valor).trim())) {\n  valorNum = parseInt(String(parsed.valor).trim(), 10);\n}\n\nconst isSuvOrPicape = (tipoCarro === 'SUV' || tipoCarro === 'Picape');\nconst isHatchOrSedan = (tipoCarro === 'Hatch' || tipoCarro === 'Sedan');\nconst isMoto = (tipoCarro === 'Moto');\n\n// 1. PRIORIDADE MÁXIMA ABSOLUTA: Verificar se a legenda escreveu explicitamente o nome do serviço!\nlet servicoExplicito = null;\nif (/motor|baixo|chassi|personalizad/i.test(captionLower)) {\n  servicoExplicito = 'Lavagem Personalizada (Por baixo e Motor)';\n} else if (/\\bvip\\b|cera|polimento/i.test(captionLower)) {\n  servicoExplicito = 'Lavagem VIP';\n} else if (/\\bducha\\b|\\bduxinha\\b|\\bduxa\\b/i.test(captionLower)) {\n  servicoExplicito = 'Ducha';\n} else if (/\\bsimples\\b|\\bsinples\\b|\\bsimpres\\b/i.test(captionLower)) {\n  servicoExplicito = 'Simples';\n} else if (/complet[ao]|conplet[ao]|complwt[ao]|geral/i.test(captionLower)) {\n  servicoExplicito = 'Completa';\n}\n\nlet tipoLavagem = servicoExplicito || '';\nlet valorFinal = valorNum !== null ? String(valorNum) : (parsed.valor && parsed.valor !== 'null' ? String(parsed.valor) : 'A combinar');\n\n// REGRA DA OFICINA JCAR (JEFERSON): Tabela fixa Hatch/Sedan 50, SUV/Picape 65 (legenda com prioridade máxima!)\nif (isJcar) {\n  if (valorNum !== null) {\n    valorFinal = String(valorNum);\n  } else {\n    if (isHatchOrSedan) valorFinal = '50';\n    else if (isSuvOrPicape) valorFinal = '65';\n    else valorFinal = '65';\n  }\n  if (!servicoExplicito) tipoLavagem = 'Completa';\n} else if (!servicoExplicito) {\n  // 2. SOMENTE se o serviço NÃO foi escrito explicitamente na legenda, aplica a Tabela Mental pelo valor!\n  if (isMoto) {\n    if (valorNum === null) valorFinal = '30';\n    tipoLavagem = 'Completa (Moto)';\n  } else if (valorNum !== null) {\n    if (isHatchOrSedan) {\n      if (valorNum === 30) tipoLavagem = 'Simples / Ducha';\n      else if (valorNum === 60) tipoLavagem = 'Completa';\n      else if (valorNum === 90) tipoLavagem = 'Lavagem VIP';\n      else if (valorNum >= 120) tipoLavagem = 'Lavagem Personalizada (Por baixo e Motor)';\n    } else if (isSuvOrPicape) {\n      if (valorNum === 40) tipoLavagem = 'Simples / Ducha';\n      else if (valorNum === 90) tipoLavagem = 'Completa';\n      else if (valorNum >= 100 && valorNum <= 120) tipoLavagem = 'Lavagem VIP';\n      else if (valorNum > 120) tipoLavagem = 'Lavagem Personalizada (Por baixo e Motor)';\n    }\n  }\n} else if (valorNum === null) {\n  // Se escreveu o nome do serviço mas não escreveu o valor, preenche o valor padrão pela Tabela Mental!\n  if (isMoto) {\n    valorFinal = '30';\n  } else if (servicoExplicito === 'Lavagem Personalizada (Por baixo e Motor)') {\n    valorFinal = '120';\n  } else if (servicoExplicito === 'Lavagem VIP') {\n    valorFinal = isSuvOrPicape ? '100' : '90';\n  } else if (servicoExplicito === 'Ducha' || servicoExplicito === 'Simples') {\n    valorFinal = isSuvOrPicape ? '40' : '30';\n  } else if (servicoExplicito === 'Completa') {\n    valorFinal = isSuvOrPicape ? '90' : '60';\n  }\n}\n\nif (!tipoLavagem) {\n  tipoLavagem = parsed.tipoLavagem || 'Completa';\n}\n\nreturn [{\n  json: {\n    placa: placa,\n    carro: parsed.carro || 'Veículo',\n    tipoCarro: tipoCarro,\n    nome: nomeFinal,\n    isJcar: isJcar,\n    telefone: telefoneInformado ? String(parsed.telefone).trim() : null,\n    tipoLavagem: tipoLavagem,\n    valor: valorFinal,\n    formaPagamento: parsed.formaPagamento || 'A combinar',\n    precisaBuscarHistorico: (!nomeInformado || !telefoneInformado) && !!placa,\n    senderNumber: dados.senderNumber,\n    remoteJid: dados.remoteJid,\n    instance: dados.instance\n  }\n}];"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        440,
+        720,
         -220
       ],
       "id": "patio-process-gemini-id",
@@ -724,10 +645,8 @@
         },
         "sheetName": {
           "__rl": true,
-          "value": "gid=0",
-          "mode": "list",
-          "cachedResultName": "Página1",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1AfkOyj27IK4rmlkwW5t_UmJBaXDRJt37kZJByr5eh_8/edit#gid=0"
+          "value": "={{ $json.isJcar ? 'Jcar' : 'Página1' }}",
+          "mode": "name"
         },
         "filtersUI": {},
         "options": {}
@@ -735,7 +654,7 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
       "position": [
-        680,
+        940,
         -220
       ],
       "id": "patio-lookup-sheet-id",
@@ -754,12 +673,12 @@
     },
     {
       "parameters": {
-        "jsCode": "const geminiData = $('Processar Dados do Gemini').first().json;\nconst rows = $input.all();\n\nlet nome = geminiData.nome;\nlet telefone = geminiData.telefone;\nlet clienteAntigo = false;\nlet jaRegistradoHoje = false;\n\n// Obter a data de hoje no padrão dd/MM (fuso de São Paulo)\nconst now = new Date();\nconst spTime = new Date(now.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }));\nconst day = String(spTime.getDate()).padStart(2, '0');\nconst month = String(spTime.getMonth() + 1).padStart(2, '0');\nconst dataHoje = day + '/' + month;\n\nif (geminiData.placa) {\n  const matches = rows.filter(r => r.json && r.json.Placa && String(r.json.Placa).toUpperCase().replace(/[^A-Z0-9]/g, '') === geminiData.placa);\n  \n  // Verificar se essa mesma placa já deu entrada HOJE na planilha\n  const matchHoje = matches.find(r => r.json && String(r.json.Data || '').trim() === dataHoje);\n  if (matchHoje) {\n    jaRegistradoHoje = true;\n  }\n\n  const match = matches.length > 0 ? matches[matches.length - 1] : null;\n  if (match && match.json) {\n    if (!nome && match.json.Nome && match.json.Nome !== 'Cliente Balcão') {\n      nome = match.json.Nome;\n      clienteAntigo = true;\n    }\n    if (!telefone && match.json.Telefone && match.json.Telefone !== 'Presencial') {\n      telefone = String(match.json.Telefone);\n      clienteAntigo = true;\n    }\n  }\n}\n\nif (!nome) nome = 'Cliente Balcão';\nif (!telefone) telefone = 'Presencial';\n\nreturn [{\n  json: {\n    nome: nome,\n    telefone: telefone,\n    carro: geminiData.carro,\n    tipoCarro: geminiData.tipoCarro,\n    placa: geminiData.placa || 'Sem placa',\n    tipoLavagem: geminiData.tipoLavagem,\n    valor: geminiData.valor,\n    formaPagamento: geminiData.formaPagamento,\n    clienteAntigo: clienteAntigo,\n    jaRegistradoHoje: jaRegistradoHoje,\n    dataHoje: dataHoje,\n    remoteJid: geminiData.remoteJid,\n    instance: geminiData.instance\n  }\n}];"
+        "jsCode": "const geminiData = $('Processar Dados do Gemini').first().json;\nconst rows = $input.all();\n\nlet nome = geminiData.nome;\nlet telefone = geminiData.telefone;\nlet clienteAntigo = false;\nlet jaRegistradoHoje = false;\nlet isJcar = geminiData.isJcar || false;\n\n// Obter a data de hoje no padrão dd/MM (fuso de São Paulo)\nconst now = new Date();\nconst spTime = new Date(now.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }));\nconst day = String(spTime.getDate()).padStart(2, '0');\nconst month = String(spTime.getMonth() + 1).padStart(2, '0');\nconst dataHoje = day + '/' + month;\n\nif (geminiData.placa) {\n  const matches = rows.filter(r => r.json && r.json.Placa && String(r.json.Placa).toUpperCase().replace(/[^A-Z0-9]/g, '') === geminiData.placa);\n  \n  // Verificar se essa mesma placa já deu entrada HOJE na planilha\n  const matchHoje = matches.find(r => r.json && String(r.json.Data || '').trim() === dataHoje);\n  if (matchHoje) {\n    jaRegistradoHoje = true;\n  }\n\n  const match = matches.length > 0 ? matches[matches.length - 1] : null;\n  if (match && match.json) {\n    if (!nome && match.json.Nome && match.json.Nome !== 'Cliente Balcão') {\n      nome = match.json.Nome;\n      clienteAntigo = true;\n    }\n    if (!telefone && match.json.Telefone && match.json.Telefone !== 'Presencial') {\n      telefone = String(match.json.Telefone);\n      clienteAntigo = true;\n    }\n  }\n}\n\nif (nome && /jeferson|jefferson|jéferson|jcar/i.test(nome)) {\n  isJcar = true;\n  nome = 'Jeferson (Jcar)';\n  const caption = String($('Dados').first().json.caption || '');\n  const hasValorNaLegenda = /\\b\\d{2,3}\\b/.test(caption);\n  if (!hasValorNaLegenda) {\n    if (geminiData.tipoCarro === 'Hatch' || geminiData.tipoCarro === 'Sedan') {\n      geminiData.valor = '50';\n    } else if (geminiData.tipoCarro === 'SUV' || geminiData.tipoCarro === 'Picape') {\n      geminiData.valor = '65';\n    }\n  }\n}\nif (!nome) nome = 'Cliente Balcão';\nif (!telefone) telefone = 'Presencial';\n\nreturn [{\n  json: {\n    nome: nome,\n    telefone: telefone,\n    carro: geminiData.carro,\n    tipoCarro: geminiData.tipoCarro,\n    placa: geminiData.placa || 'Sem placa',\n    tipoLavagem: geminiData.tipoLavagem,\n    valor: geminiData.valor,\n    formaPagamento: geminiData.formaPagamento,\n    clienteAntigo: clienteAntigo,\n    jaRegistradoHoje: jaRegistradoHoje,\n    isJcar: isJcar,\n    dataHoje: dataHoje,\n    remoteJid: geminiData.remoteJid,\n    instance: geminiData.instance\n  }\n}];"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        920,
+        1160,
         -220
       ],
       "id": "patio-merge-history-id",
@@ -909,8 +828,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
       "position": [
-        1260,
-        -240
+        1880,
+        -220
       ],
       "id": "patio-append-sheet-id",
       "name": "Gravar Entrada Pátio",
@@ -938,8 +857,8 @@
       "type": "n8n-nodes-evolution-api.evolutionApi",
       "typeVersion": 1,
       "position": [
-        1500,
-        -240
+        2120,
+        -220
       ],
       "id": "patio-confirm-whatsapp-id",
       "name": "Confirmar no WhatsApp",
@@ -949,22 +868,6 @@
           "name": "Evolution account"
         }
       }
-    },
-    {
-      "parameters": {
-        "content": "## Aviso de Carro Pronto (Comando \"ok\")\n\nQuando o **Portuga** envia a mensagem exata **`ok`**:\n1. Busca na planilha o último pedido confirmado via WhatsApp que ainda não foi concluído\n2. Atualiza o status na planilha para **Pronto**\n3. Envia mensagem no privado do cliente avisando que o carro já está pronto e confirma para o Portuga!",
-        "height": 360,
-        "width": 1450,
-        "color": 4
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        -280,
-        -680
-      ],
-      "id": "ok-sticky-note-id",
-      "name": "Sticky Note - Carro Pronto"
     },
     {
       "parameters": {
@@ -991,8 +894,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
       "position": [
-        -280,
-        -540
+        60,
+        -560
       ],
       "id": "ok-read-sheet-id",
       "name": "Buscar Pedidos na Planilha",
@@ -1015,8 +918,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -40,
-        -540
+        280,
+        -560
       ],
       "id": "ok-find-client-id",
       "name": "Localizar Cliente Pendente"
@@ -1049,8 +952,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        200,
-        -540
+        500,
+        -560
       ],
       "id": "ok-if-found-id",
       "name": "Tem Cliente Pendente?"
@@ -1113,8 +1016,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
       "position": [
-        440,
-        -600
+        740,
+        -620
       ],
       "id": "ok-update-sheet-id",
       "name": "Atualizar Status Pronto",
@@ -1144,8 +1047,8 @@
       "type": "n8n-nodes-evolution-api.evolutionApi",
       "typeVersion": 1,
       "position": [
-        680,
-        -600
+        980,
+        -620
       ],
       "id": "ok-notify-client-id",
       "name": "Avisar Cliente no WhatsApp",
@@ -1170,8 +1073,8 @@
       "type": "n8n-nodes-evolution-api.evolutionApi",
       "typeVersion": 1,
       "position": [
-        920,
-        -600
+        1220,
+        -620
       ],
       "id": "ok-confirm-boss-id",
       "name": "Confirmar Aviso ao Gerente",
@@ -1196,7 +1099,7 @@
       "type": "n8n-nodes-evolution-api.evolutionApi",
       "typeVersion": 1,
       "position": [
-        440,
+        740,
         -440
       ],
       "id": "ok-none-found-boss-id",
@@ -1215,8 +1118,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -632,
-        128
+        -480,
+        200
       ],
       "id": "admin-control-code-id",
       "name": "Controle do Bot"
@@ -1235,8 +1138,8 @@
       "type": "n8n-nodes-evolution-api.evolutionApi",
       "typeVersion": 1,
       "position": [
-        -280,
-        420
+        -240,
+        560
       ],
       "id": "admin-reply-whatsapp-id",
       "name": "Responder Comando Admin",
@@ -1275,7 +1178,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        1040,
+        1380,
         -220
       ],
       "id": "patio-if-duplicate-id",
@@ -1295,7 +1198,7 @@
       "type": "n8n-nodes-evolution-api.evolutionApi",
       "typeVersion": 1,
       "position": [
-        1260,
+        1620,
         -80
       ],
       "id": "patio-warn-duplicate-id",
@@ -1316,8 +1219,8 @@
       "type": "n8n-nodes-base.n8nTrigger",
       "typeVersion": 1,
       "position": [
-        -960,
-        420
+        -920,
+        560
       ],
       "id": "startup-trigger-id",
       "name": "Quando o Portuguinha Iniciar"
@@ -1336,8 +1239,8 @@
       "type": "n8n-nodes-evolution-api.evolutionApi",
       "typeVersion": 1,
       "position": [
-        -720,
-        420
+        -480,
+        560
       ],
       "id": "startup-notify-guilherme-id",
       "name": "Avisar Guilherme Inicialização",
@@ -1351,6 +1254,316 @@
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "check-is-jcar-true",
+              "leftValue": "={{ $json.isJcar }}",
+              "rightValue": "true",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1620,
+        -260
+      ],
+      "id": "patio-if-jcar-id",
+      "name": "É da Jcar / Jeferson?"
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "resource": "sheet",
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1AfkOyj27IK4rmlkwW5t_UmJBaXDRJt37kZJByr5eh_8",
+          "mode": "list",
+          "cachedResultName": "Planilha_LavaRápido",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1AfkOyj27IK4rmlkwW5t_UmJBaXDRJt37kZJByr5eh_8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Jcar",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Nome": "={{ $json.nome }}",
+            "Carro": "={{ $json.carro }}",
+            "Data": "={{ $now.format('dd/MM') }}",
+            "Tipo Lavagem": "={{ $json.tipoLavagem }}",
+            "Placa": "={{ $json.placa }}",
+            "FormaPagamento": "={{ $json.formaPagamento }}",
+            "Valor": "={{ $json.valor }}",
+            "TipoCarro": "={{ $json.tipoCarro }}",
+            "Telefone": "={{ $json.telefone }}",
+            "EstadoCarro": "Entrada Pátio"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Nome",
+              "displayName": "Nome",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Telefone",
+              "displayName": "Telefone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "TipoCarro",
+              "displayName": "TipoCarro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Carro",
+              "displayName": "Carro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Tipo Lavagem",
+              "displayName": "Tipo Lavagem",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "EstadoCarro",
+              "displayName": "EstadoCarro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Placa",
+              "displayName": "Placa",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "FormaPagamento",
+              "displayName": "FormaPagamento",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Valor",
+              "displayName": "Valor",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Data",
+              "displayName": "Data",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1880,
+        -380
+      ],
+      "id": "patio-append-jcar-sheet-id",
+      "name": "Gravar Entrada Jcar",
+      "credentials": {
+        "googleApi": {
+          "id": "KSijEagUAcZC9AmD",
+          "name": "Google Service Account account"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 1500
+    },
+    {
+      "parameters": {
+        "resource": "messages-api",
+        "instanceName": "={{ $('Dados').first().json.instance }}",
+        "remoteJid": "={{ $('Dados').first().json.remoteJid }}",
+        "messageText": "={{ '🚗🇵🇹 *ENTRADA NO PÁTIO REGISTRADA — OFICINA JCAR!*\\n\\n👤 *Cliente:* Jeferson (Jcar)\\n📱 *Telefone:* ' + $('Mesclar com Histórico').first().json.telefone + '\\n🚘 *Veículo:* ' + $('Mesclar com Histórico').first().json.carro + ' (' + $('Mesclar com Histórico').first().json.tipoCarro + ') — *Placa:* ' + $('Mesclar com Histórico').first().json.placa + '\\n🧼 *Serviço:* ' + $('Mesclar com Histórico').first().json.tipoLavagem + '\\n💰 *Valor:* R$ ' + $('Mesclar com Histórico').first().json.valor + ($('Mesclar com Histórico').first().json.formaPagamento && $('Mesclar com Histórico').first().json.formaPagamento !== 'A combinar' ? ' (' + $('Mesclar com Histórico').first().json.formaPagamento + ')' : '') + '\\n\\n✅ *Já lancei na planilha exclusiva da JCAR!*\\nPode mandar a água que a caranga tá liberada pro banho! 🧽💨' }}",
+        "options_message": {
+          "delay": 600,
+          "linkPreview": false
+        }
+      },
+      "type": "n8n-nodes-evolution-api.evolutionApi",
+      "typeVersion": 1,
+      "position": [
+        2120,
+        -380
+      ],
+      "id": "patio-confirm-jcar-whatsapp-id",
+      "name": "Confirmar Jcar no WhatsApp",
+      "credentials": {
+        "evolutionApi": {
+          "id": "NGlzRNDqYbstoIAh",
+          "name": "Evolution account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "### 🟢 1. Recepção & Segurança\n\nRecebe os webhooks da Evolution API, valida autenticidade, extrai mensagens e aplica travas anti-mensagens antigas (>5 min).",
+        "height": 280,
+        "width": 880,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -960,
+        120
+      ],
+      "id": "note-reception-id",
+      "name": "Sticky Note - Recepção"
+    },
+    {
+      "parameters": {
+        "content": "### 🚗 2. Modo Pátio & Oficina Jcar (Visão Computacional 3.5)\n\nLê fotos de veículos da gerência, aplica a **Tabela Mental de Preços**, tabela fixa da **Oficina Jcar**, proteção anti-duplicidade e grava na aba correspondente da planilha.",
+        "height": 480,
+        "width": 2360,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        20,
+        -420
+      ],
+      "id": "note-patio-jcar-id",
+      "name": "Sticky Note - Modo Pátio"
+    },
+    {
+      "parameters": {
+        "content": "### 📲 3. Aviso de Carro Pronto (Comando \"ok\" com Citação)\n\nQuando o Portuga responde a mensagem de um pedido enviando **`ok`**, o sistema localiza a placa/cliente com 100% de precisão, marca como **Pronto** e notifica o cliente no WhatsApp.",
+        "height": 380,
+        "width": 1440,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        20,
+        -680
+      ],
+      "id": "note-car-ready-id",
+      "name": "Sticky Note - Carro Pronto"
+    },
+    {
+      "parameters": {
+        "content": "### 💬 4. Atendimento Inteligente aos Clientes (WhatsApp)\n\nRecepcionista virtual com IA Gemini, memória de conversa e ferramentas automáticas para agendar lavagens no WhatsApp de clientes comuns.",
+        "height": 420,
+        "width": 680,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        -20
+      ],
+      "id": "note-customer-ai-id",
+      "name": "Sticky Note - Atendimento Clientes"
+    },
+    {
+      "parameters": {
+        "content": "### ⚙️ 5. Comandos da Gerência & Inicialização\n\n• **Ligar/Desligar:** Envia aviso no WhatsApp do Guilherme ao iniciar.\n• **Controle Remoto:** Comandos *desativar*, *ativar* e *status* exclusivos da gerência.",
+        "height": 240,
+        "width": 880,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -960,
+        480
+      ],
+      "id": "note-admin-startup-id",
+      "name": "Sticky Note - Gerência"
+    },
+    {
+      "parameters": {
+        "jsCode": "const staticData = $getWorkflowStaticData('global');\n\n// Obter a data de hoje no formato YYYY-MM-DD (fuso horário de São Paulo)\nconst now = new Date();\nconst spTime = new Date(now.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }));\nconst year = spTime.getFullYear();\nconst month = String(spTime.getMonth() + 1).padStart(2, '0');\nconst day = String(spTime.getDate()).padStart(2, '0');\nconst hojeStr = `${year}-${month}-${day}`;\n\n// Se já enviou o aviso de inicialização hoje, bloqueia e não envia nada (retorna array vazio)\nif (staticData.ultimoAvisoInicializacao === hojeStr) {\n  return [];\n}\n\n// Primeira inicialização do dia: registra a data e libera o envio\nstaticData.ultimoAvisoInicializacao = hojeStr;\n\nreturn [{\n  json: {\n    primeiraInicializacaoDoDia: true,\n    dataHoje: hojeStr\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -700,
+        560
+      ],
+      "id": "startup-daily-lock-id",
+      "name": "Apenas Primeira Inicialização do Dia"
     }
   ],
   "pinData": {},
@@ -1625,7 +1838,7 @@
       "main": [
         [
           {
-            "node": "Gravar Entrada Pátio",
+            "node": "É da Jcar / Jeferson?",
             "type": "main",
             "index": 0
           }
@@ -1640,6 +1853,46 @@
       ]
     },
     "Quando o Portuguinha Iniciar": {
+      "main": [
+        [
+          {
+            "node": "Apenas Primeira Inicialização do Dia",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "É da Jcar / Jeferson?": {
+      "main": [
+        [
+          {
+            "node": "Gravar Entrada Jcar",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gravar Entrada Pátio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gravar Entrada Jcar": {
+      "main": [
+        [
+          {
+            "node": "Confirmar Jcar no WhatsApp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Apenas Primeira Inicialização do Dia": {
       "main": [
         [
           {

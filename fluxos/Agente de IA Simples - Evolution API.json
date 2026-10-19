@@ -1566,7 +1566,6 @@
       "name": "Apenas Primeira Inicialização do Dia"
     }
   ],
-  "pinData": {},
   "connections": {
     "Webhook": {
       "main": [
@@ -1904,17 +1903,14 @@
       ]
     }
   },
-  "active": true,
   "settings": {
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "d6674764-23ea-4b6e-99d8-9e13d8d84cb1",
-  "meta": {
-    "templateCredsSetupCompleted": true,
-    "instanceId": "b2e7ef9d327e42482b5f482ae77f45d93857ea09badcc0a728cb563764b53662"
-  },
-  "nodeGroups": [],
-  "id": "LmrRkDdn7hcNzNFf",
-  "tags": []
+  "staticData": {
+    "global": {
+      "botAtivo": true,
+      "ultimoAvisoInicializacao": "2026-10-19"
+    }
+  }
 }

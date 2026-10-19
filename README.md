@@ -100,3 +100,13 @@ Ao enviar uma foto no WhatsApp da gerência:
   - *(Basta mandar a foto com a legenda "Jeferson" ou "Jcar" sem precisar digitar valor nenhum — ele já aplica os R$ 50 ou R$ 65 automaticamente pelo porte do veículo!)*
   - ⚠️ **Prioridade Máxima à Legenda:** Se for um caso especial e você/Portuga digitarem um valor explícito na legenda (ex: `Jeferson 80`, `Jcar motor 120`), o valor digitado na legenda prevalece sempre!
 
+---
+
+## 📊 Aba Resumo (Dashboard Financeiro com Virada Mensal Automática)
+
+- **Como funciona:** Aba dedicada na planilha Google Sheets que consolida em tempo real o faturamento do Lava Rápido Geral (`Página1`) e da parceria B2B (`Jcar`), sem risco de fórmulas serem sobrescritas por novos registros.
+- **Mês Vigente 100% Dinâmico:** Fórmulas inteligentes baseadas em `=HOJE()` calculam automaticamente as receitas entre o primeiro e o último dia do mês corrente (`=DATA(ANO(HOJE()); MES(HOJE()); 1)` a `=FIMMÊS(HOJE(); 0)`).
+  - Todo **dia 1º do mês à meia-noite**, o painel vira o cabeçalho sozinho para o novo mês e zera o contador em tempo real.
+- **Histórico Mensal de 2026:** Tabela dedicada com os meses de Outubro, Novembro e Dezembro de 2026 e o acumulado anual, garantindo que o faturamento dos meses anteriores permaneça salvo e acessível para consultas gerenciais.
+
+

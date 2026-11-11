@@ -109,4 +109,17 @@ Ao enviar uma foto no WhatsApp da gerência:
   - Todo **dia 1º do mês à meia-noite**, o painel vira o cabeçalho sozinho para o novo mês e zera o contador em tempo real.
 - **Histórico Mensal de 2026:** Tabela dedicada com os meses de Outubro, Novembro e Dezembro de 2026 e o acumulado anual, garantindo que o faturamento dos meses anteriores permaneça salvo e acessível para consultas gerenciais.
 
+---
+
+## 📌 Mini-Resumo no Topo das Planilhas (Página 1 e Jcar)
+
+- **Layout Fixado no Topo:**
+  - **Linha 1:** Painel de Resumo do Mês Vigente em destaque (**38px de altura, fonte 12 em negrito e fundo azul executivo `#D9E3F0`**), calculando o total de veículos com `=CONT.VALORES(D4:D)` e a receita total com `=SOMA(I4:I)`.
+  - **Linha 2:** Cabeçalhos das colunas (`Nome`, `Telefone`, `TipoCarro`, `Carro`, `Tipo Lavagem`, `EstadoCarro`, `Placa`, `FormaPagamento`, `Valor`, `Data`).
+  - **Linhas 1 e 2 Congeladas:** Ficam permanentemente visíveis no topo da tela durante a rolagem.
+  - **Linha 3:** Linha em branco de folga (espaçamento visual limpo).
+  - **Linha 4 em diante:** Pedidos registrados em ordem cronológica com tipografia padrão e sem negrito.
+- **Serviço Local (`utilitarios/server.js`):** Microserviço interno no container n8n (porta 4000) que mantém o layout e as fórmulas sempre íntegros e limpos.
+
+
 

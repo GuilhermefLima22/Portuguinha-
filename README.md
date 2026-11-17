@@ -83,6 +83,7 @@ Ao enviar uma foto no WhatsApp da gerência:
 4. **Visão com Retry Automático:** Usa o modelo ultrarrápido `gemini-3.5-flash-lite` com até 4 retentativas automáticas contra oscilações de conexão.
 5. **Roteamento Exclusivo da Oficina Jcar (Jeferson):** Carros identificados com "Jeferson" ou "Jcar" são gravados automaticamente na aba dedicada `Jcar` da planilha.
 6. **Anti-Spam de Inicialização (Trava Diária):** O aviso de "sistema iniciado" só é enviado no primeiro boot do dia. Qualquer reinicialização ou manutenção subsequente no mesmo dia é silenciada automaticamente para não poluir o seu WhatsApp!
+7. **Proteção de Sessão Signal/LID no Baileys (Evolution API):** Correção aplicada em `/evolution/node_modules/baileys/lib/Socket/messages-send.js` (`assertSessions(lids, false)`) para evitar que o envio de confirmações encerre a sessão criptografada ativa (`Closing session: SessionEntry`) com dispositivos `@lid`.
 
 ---
 

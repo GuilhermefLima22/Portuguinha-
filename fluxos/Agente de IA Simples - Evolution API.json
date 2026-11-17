@@ -1156,7 +1156,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const dados = $input.first().json;\nconst staticData = $getWorkflowStaticData('global');\n\nif (typeof staticData.botAtivo !== 'boolean') {\n  staticData.botAtivo = true;\n}\n\n// Filtro de mensagens antigas (mais de 5 minutos atrás - ex: reconexão do WhatsApp)\nconst msgTs = Number(dados.messageTimestamp || 0);\nconst nowTs = Math.floor(Date.now() / 1000);\nconst isOldMessage = msgTs > 0 && (nowTs - msgTs) > 300;\n\nif (isOldMessage) {\n  return [{\n    json: {\n      ...dados,\n      botAtivo: false,\n      mensagemAntiga: true,\n      comandoAdmin: '',\n      msgRespostaAdmin: ''\n    }\n  }];\n}\n\n// Exclusivo para o número do Guilherme\nconst guilhermeNums = ['5511989568771', '11989568771'];\nconst isGuilherme = guilhermeNums.some(num =>\n  (dados.remoteJid || '').includes(num) || (dados.senderNumber || '').includes(num)\n);\nconst isFromMe = dados.fromMe === true || dados.fromMe === 'true';\nconst text = String(dados.conversation || '').trim().toLowerCase();\n\nlet comandoAdmin = '';\nlet msgRespostaAdmin = '';\n\nif (isGuilherme && !isFromMe && (dados.messageType === 'conversation' || dados.messageType === 'extendedTextMessage')) {\n  if (text === 'desativar' || text === 'pausar' || text === 'desligar') {\n    staticData.botAtivo = false;\n    comandoAdmin = 'desativar';\n    msgRespostaAdmin = '⏸️ *Portuguinha DESATIVADO, patrão!* 🛑🇵🇹\\n\\nEntrei em modo silencioso e não vou responder clientes nem processar pedidos até você mandar *ativar* aqui para mim!';\n  } else if (text === 'ativar' || text === 'ligar') {\n    staticData.botAtivo = true;\n    comandoAdmin = 'ativar';\n    msgRespostaAdmin = '▶️ *Portuguinha ATIVADO e nos trinques, patrão!* 🚗🇵🇹✨\\n\\nJá estou de volta atendendo os clientes e anotando os carros do pátio a todo vapor! 🧼💨';\n  } else if (text === 'status') {\n    comandoAdmin = 'status';\n    msgRespostaAdmin = staticData.botAtivo\n      ? '🟢 *Status do Portuguinha:* Estou *ATIVADO* e trabalhando nos trinques, patrão! 🚗🇵🇹✨\\n_(Mande *desativar* se quiser me pausar)_'\n      : '🔴 *Status do Portuguinha:* Estou *DESATIVADO* (em pausa), patrão! ⏸️\\n_(Mande *ativar* quando quiser me ligar de novo)_';\n  }\n}\n\nreturn [{\n  json: {\n    ...dados,\n    botAtivo: staticData.botAtivo,\n    mensagemAntiga: false,\n    comandoAdmin,\n    msgRespostaAdmin\n  }\n}];"
+        "jsCode": "const dados = $input.first().json;\nconst staticData = $getWorkflowStaticData('global');\n\nif (typeof staticData.botAtivo !== 'boolean') {\n  staticData.botAtivo = true;\n}\n\n// Identificar números da gerência (Guilherme e Portuga)\nconst guilhermeNums = ['5511989568771', '11989568771'];\nconst bossNums = ['5511989568771', '11989568771', '5511944724367', '11944724367'];\nconst isGuilherme = guilhermeNums.some(num =>\n  (dados.remoteJid || '').includes(num) || (dados.senderNumber || '').includes(num)\n);\nconst isBoss = bossNums.some(num =>\n  (dados.remoteJid || '').includes(num) || (dados.senderNumber || '').includes(num)\n);\nconst isFromMe = dados.fromMe === true || dados.fromMe === 'true';\n\n// Filtro de mensagens antigas:\n// - Para fotos de veículos enviadas pela gerência: tolerância de até 4 horas (14400s) caso o WhatsApp/Evolution reconecte após o envio (já possui trava anti-duplicidade de placa no dia)\n// - Para mensagens normais de clientes: 5 minutos (300s)\nconst isPatioImage = isBoss && !isFromMe && dados.messageType === 'imageMessage';\nconst maxAgeSeconds = isPatioImage ? 14400 : 300;\n\nconst msgTs = Number(dados.messageTimestamp || 0);\nconst nowTs = Math.floor(Date.now() / 1000);\nconst isOldMessage = msgTs > 0 && (nowTs - msgTs) > maxAgeSeconds;\n\nif (isOldMessage) {\n  return [{\n    json: {\n      ...dados,\n      botAtivo: false,\n      mensagemAntiga: true,\n      comandoAdmin: '',\n      msgRespostaAdmin: ''\n    }\n  }];\n}\n\nconst text = String(dados.conversation || '').trim().toLowerCase();\n\nlet comandoAdmin = '';\nlet msgRespostaAdmin = '';\n\nif (isGuilherme && !isFromMe && (dados.messageType === 'conversation' || dados.messageType === 'extendedTextMessage')) {\n  if (text === 'desativar' || text === 'pausar' || text === 'desligar') {\n    staticData.botAtivo = false;\n    comandoAdmin = 'desativar';\n    msgRespostaAdmin = '⏸️ *Portuguinha DESATIVADO, patrão!* 🛑🇵🇹\\n\\nEntrei em modo silencioso e não vou responder clientes nem processar pedidos até você mandar *ativar* aqui para mim!';\n  } else if (text === 'ativar' || text === 'ligar') {\n    staticData.botAtivo = true;\n    comandoAdmin = 'ativar';\n    msgRespostaAdmin = '▶️ *Portuguinha ATIVADO e nos trinques, patrão!* 🚗🇵🇹✨\\n\\nJá estou de volta atendendo os clientes e anotando os carros do pátio a todo vapor! 🧼💨';\n  } else if (text === 'status') {\n    comandoAdmin = 'status';\n    msgRespostaAdmin = staticData.botAtivo\n      ? '🟢 *Status do Portuguinha:* Estou *ATIVADO* e trabalhando nos trinques, patrão! 🚗🇵🇹✨\\n_(Mande *desativar* se quiser me pausar)_'\n      : '🔴 *Status do Portuguinha:* Estou *DESATIVADO* (em pausa), patrão! ⏸️\\n_(Mande *ativar* quando quiser me ligar de novo)_';\n  }\n}\n\nreturn [{\n  json: {\n    ...dados,\n    botAtivo: staticData.botAtivo,\n    mensagemAntiga: false,\n    comandoAdmin,\n    msgRespostaAdmin\n  }\n}];"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -1275,7 +1275,7 @@
         "remoteJid": "5511989568771@s.whatsapp.net",
         "messageText": "🟢 *Portuguinha iniciado e pronto pro combate, patrão!* 🚗🇵🇹✨\n\nO sistema já está online e trabalhando nos trinques! Pode mandar as fotos do pátio que já estou de olho na planilha!\n\n⚙️ _Seus comandos rápidos:_\n• *ok* — avisa o cliente que o carro ficou pronto\n• *status* — vê se estou ativo ou pausado\n• *desativar* / *ativar* — pausa ou liga o bot",
         "options_message": {
-          "delay": 1500,
+          "delay": 15000,
           "linkPreview": false
         }
       },
@@ -2015,7 +2015,7 @@
   "staticData": {
     "global": {
       "botAtivo": true,
-      "ultimoAvisoInicializacao": "2026-11-11",
+      "ultimoAvisoInicializacao": "2026-11-17",
       "memoriaVeiculos": {
         "GBJ6D21": {
           "placa": "GBJ6D21",
@@ -3250,6 +3250,36 @@
           "ultimaVisita": "11/11",
           "visitas": 1,
           "isJcar": false
+        },
+        "FJR1756": {
+          "placa": "FJR1756",
+          "nome": null,
+          "telefone": null,
+          "carro": "Honda HR-V",
+          "tipoCarro": "Van",
+          "ultimaVisita": "11/11",
+          "visitas": 1,
+          "isJcar": false
+        },
+        "DZE8F97": {
+          "placa": "DZE8F97",
+          "nome": null,
+          "telefone": null,
+          "carro": "Honda Fit",
+          "tipoCarro": "Hatch",
+          "ultimaVisita": "11/11",
+          "visitas": 1,
+          "isJcar": false
+        },
+        "SIX4D80": {
+          "placa": "SIX4D80",
+          "nome": null,
+          "telefone": null,
+          "carro": "Chevrolet Onix",
+          "tipoCarro": "Hatch",
+          "ultimaVisita": "17/11",
+          "visitas": 1,
+          "isJcar": false
         }
       },
       "mesesAnteriores": [
@@ -3258,7 +3288,7 @@
     }
   },
   "pinData": {},
-  "versionId": "630e390a-b26b-4d6a-bd72-92d7bf001abc",
+  "versionId": "e830c273-3eb3-49d2-a169-0b94eb880c79",
   "meta": {
     "templateCredsSetupCompleted": true
   }

@@ -105,7 +105,7 @@ async function realignSheet(sheetTitle) {
         '',
         '',
         '',
-        '',
+        'Valor Total:',
         '=SUM(I4:I)',
         ''
       ]
